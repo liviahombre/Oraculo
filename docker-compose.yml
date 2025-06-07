@@ -1,15 +1,4 @@
 services:
-  n8n:
-    image: docker.n8n.io/n8nio/n8n
-    container_name: n8n
-    ports:
-      - "5678:5678"
-    volumes:
-      - n8n_data:/home/node/.n8n
-    networks:
-      - n8n_webui_network
-    restart: unless-stopped
-
   open-webui:
     image: ghcr.io/open-webui/open-webui:main
     container_name: open-webui
